@@ -52,7 +52,7 @@ public class AudioObject : MonoBehaviour
 
     void Start()
     {
-
+        //adding a comment to test commit after moving .gitignore
     }
 
     void PlaySound()

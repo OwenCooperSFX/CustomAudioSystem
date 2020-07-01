@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AudioEventManager.cs" />
     <Compile Include="Assets\Scripts\AudioEvent.cs" />
     <Compile Include="Assets\Scripts\AudioObject.cs" />
     <Compile Include="Assets\Scripts\IPooledObject.cs" />
