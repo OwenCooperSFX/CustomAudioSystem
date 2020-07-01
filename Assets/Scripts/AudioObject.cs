@@ -54,6 +54,7 @@ public class AudioObject : MonoBehaviour
     {
         //adding a comment to test commit after moving .gitignore
         //test again. If Librarby and assembly files keep showing up, consider adding to .gitignore or stop tracking.
+        //test again after using stop tracking.
     }
 
     void PlaySound()
