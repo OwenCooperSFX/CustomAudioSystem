@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94c2b2839e00b242bc7822ef23ed502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: New Audio Object
-  voiceLimit: 10
+  Name: New Audio Object
+  voiceLimit: 3
   positioning: 0
   loop: 0
-  audioClips: []
+  audioClips:
+  - {fileID: 0}

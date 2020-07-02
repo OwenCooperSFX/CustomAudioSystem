@@ -43,4 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092519479c95f8f42b220c0914294cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventList: []
+  eventList:
+  - Name: MyFirstEvent
+    AudioObjects:
+    - {fileID: 9070608557129927451, guid: 750ac03dc903602458531cd80a6b8a1f, type: 3}
+  - Name: 2
+    AudioObjects: []
+  - Name: 3
+    AudioObjects: []
+  - Name: 4
+    AudioObjects: []
+  - Name: 5
+    AudioObjects: []
