@@ -1,46 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class AudioEvent : MonoBehaviour
+[System.Serializable]
+public class AudioEvent: MonoBehaviour
 {
-    [System.Serializable]
-    public class Stuff
-    {
-        //Name the object, load a prefab that carries the audioclips and the class for what it does (e.g. RandomContainer, SequenceContainer)
-        //Probably the best way to store custom audioObjects is to the Unity Prefabs, so they can be stored and tweaked individually,
-        //without risking screwing things up here.
-        public string name;
-        public GameObject audioObject;
-        public int voiceLimit = 10; //Use the voiceLimit as an argument for the audioObject's class.
-        //test commit
-    }
+    public string EventName = "New Audio Event";
+    public AudioObject[] AudioObjects;
+    private AudioObject audioObject;
 
-    public List<Stuff> Stuffs;
-
-    void Awake()
+    public void PlayEvent()
     {
-        //audioSource = this.gameObject.GetComponent<AudioSource>();
-    }
+        //if (Emitter == null)
+        //{
+        //    Debug.LogWarning("No audio emitter designated. Assigning automatically.");
+        //}
 
-    void Start()
-    {
-        foreach (Stuff thing in Stuffs)
+        //if (audioEmitter == null)
+        //{
+        //    Debug.LogError(this + ":" + " No audio emitter assigned!");
+        //    return;
+        //}
+
+
+
+        for (int i = 0; i < AudioObjects.Length; i++)
         {
-            // too tired for this :(
+            audioObject = AudioObjects[i];
+            //audioObject.transform.parent = Emitter.transform;
+            audioObject.PlaySound();
         }
     }
-
-    /*
-    void PostEvent()
-    {
-        for (int i = 0; i < audioObjects.Length; i++)
-        {
-            if (audioObjects[i] != null)
-            {
-
-            }
-        }
-    }
-    */
 }

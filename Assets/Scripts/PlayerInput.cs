@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public RandomContainer randomContainer;
+    public GameObject eventObject;
+    private AudioEvent audioEvent;
 
     void Awake()
     {
-
+        audioEvent = GetComponent<AudioEvent>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            randomContainer.PlaySound();
-            Debug.Log("Active voices: " + randomContainer.activeVoices);
+            audioEvent.PlayEvent();
         }
     }
 }

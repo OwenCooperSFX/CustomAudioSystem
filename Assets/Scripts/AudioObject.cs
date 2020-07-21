@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Audio;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioObject : MonoBehaviour
@@ -16,8 +14,9 @@ public class AudioObject : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private int voiceLimit = 3;
     private enum Positioning { _3D, _2D }
+
     [SerializeField] private Positioning positioning;
-    public bool loop;
+    [SerializeField] private bool loop;
     //public AudioMixerGroup output;
 
     [Header("Assets")]
@@ -69,32 +68,32 @@ public class AudioObject : MonoBehaviour
 
     }
 
-    void CreateVoices(int _voiceLimit)
-    {
-        voices = new List<AudioSource>();
+    //void CreateVoices(int _voiceLimit)
+    //{
+    //    voices = new List<AudioSource>();
 
-        if (_voiceLimit <= 0)
-        {
-            _voiceLimit = 1;
-            Debug.LogWarning("Invalid voiceLimit! Set to default: 1.");
-        }
+    //    if (_voiceLimit <= 0)
+    //    {
+    //        _voiceLimit = 1;
+    //        Debug.LogWarning("Invalid voiceLimit! Set to default: 1.");
+    //    }
 
-        if (_voiceLimit > 0)
-        {
-            for (int i = 0; i < _voiceLimit; i++)
-            {
-                _voice = gameObject.AddComponent<AudioSource>();
-                _voice.enabled = false;
+    //    if (_voiceLimit > 0)
+    //    {
+    //        for (int i = 0; i < _voiceLimit; i++)
+    //        {
+    //            _voice = gameObject.AddComponent<AudioSource>();
+    //            _voice.enabled = false;
 
-                if (loop)
-                {
-                    _voice.loop = true;
-                }
+    //            if (loop)
+    //            {
+    //                _voice.loop = true;
+    //            }
 
-                voices.Add(_voice);
-            }
-        }
-    }
+    //            voices.Add(_voice);
+    //        }
+    //    }
+    //}
 
     void SetPositioning(Positioning _positioning)
     {

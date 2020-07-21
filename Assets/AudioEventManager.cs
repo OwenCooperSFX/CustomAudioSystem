@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class AudioEventManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class AudioEvent
-    {
-        public string Name = "New Audio Event";
-        public AudioObject[] AudioObjects;
-    }
+    public List<GameObject> eventList;
 
-    public List<AudioEvent> eventList;
-
-    private AudioEvent audioEvent;
+    public Dictionary<string, AudioEvent> eventDictionary;
 
     void Awake()
     {
-        audioEvent = new AudioEvent();
+        //eventDictionary = new Dictionary<string, AudioEvent>();
+
+        //foreach (AudioEvent _audioEvent in eventList)
+        //{
+        //    eventDictionary.Add(_audioEvent.EventName, _audioEvent);
+        //}
     }
 
     void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            for (int i = 0; i < (audioEvent.AudioObjects.Length - 1); i++)
-            {
-                audioEvent.AudioObjects[i].PlaySound();
-            }
+            //eventList[0].PlayEvent();
+
+            //foreach (AudioEvent _audioEvent in eventList)
+            //{
+            //    _audioEvent.PlayEvent();
+            //}
+            Debug.Log("AudioEvent.PlayEvent");
         }
+    }
+
+    void Init()
+    {
+
     }
 }
